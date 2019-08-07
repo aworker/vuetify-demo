@@ -1,0 +1,2 @@
+1、通过 vue add router 添加 router组件
+2、 将 App.vue 添加 <v-app>.<v-content>.<router-view> 三层结构其中<router-view>组件可以根据 router.js中定义的路由，路由内容
