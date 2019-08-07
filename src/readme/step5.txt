@@ -1,0 +1,2 @@
+介绍一下 v-btn 和 v-icon组件的用法，具体组件在Home.vue中书写
+在main.js中引入了google的 Material Design Icons(MDI) 的css，支持了icon的展示

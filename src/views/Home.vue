@@ -1,23 +1,27 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <h1>This is the homepage</h1>
-    <p class="red white--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ipsam cupiditate in et libero blanditiis nam fuga beatae eum impedit officia temporibus voluptate error at aliquam, nobis architecto sunt atque?</p>
-    <p class="pink red--text lighten-3 text--darken-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam fugit rerum, magni beatae sapiente dolores consectetur ea laboriosam totam, nulla nemo atque veritatis quibusdam esse aliquid quaerat laborum id nihil!</p>
-    <h1 class="display-4">Massive display text</h1>
-    <h4 class="display-1">Smaller display text</h4>
-    <p class="headline">this is a headline</p>
-    <p class="subheading">this is a sub-heading</p>
-    <p class="caption">this is a caption</p>
-    <p class="text-capitalize">this is a capitalize text</p>
-  </div>
+    <div class="home">
+        <h1>This is the home page</h1>
+        <v-divider></v-divider>
+        <v-btn class="pink white--text">click me</v-btn>
+
+        <v-btn depressed class="pink">click me</v-btn>
+        <v-btn text class="pink">click me</v-btn>
+
+        <v-btn dark class="pink white--text">
+            <v-icon left>email</v-icon>
+            <span>email me</span>
+        </v-btn>
+
+        <v-btn fab dark small depressed color="purple">
+            <v-icon dark>favorite</v-icon>
+        </v-btn>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
 
-export default {
-  name: 'home',
-}
+    export default {
+        name: 'home',
+    }
 </script>
