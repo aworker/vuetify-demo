@@ -1,0 +1,2 @@
+可以在vuetify官网查询colors和font以及display来查看vuetify对于
+组件的背景颜色，字体大小，字体颜色，展示，等。
