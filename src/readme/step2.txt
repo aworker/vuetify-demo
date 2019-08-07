@@ -1,0 +1,4 @@
+vuetify中的每个元素属性都要其独特的意义，在App.vue中：
+1、<v-app>表示是vuetify的根元素，所有的vuetify元素都应该写在这里面
+2、 app 属性控制 可以让网页在下拉时，有app装饰的元素始终显示在屏幕上
+3、 dark 是vuetify的一种主题，让元素变成黑低白字， class='indigo' 也是一种主题，不同主题之间可以项目叠加
