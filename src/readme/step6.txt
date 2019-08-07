@@ -1,0 +1,2 @@
+主要测试下 vuetify里面的breakpoint 属性
+具体内容可以在vuetify的官网中搜索 breakpoint查询学习
