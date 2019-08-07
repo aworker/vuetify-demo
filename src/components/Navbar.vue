@@ -10,13 +10,22 @@
                 <span>Sign Out</span>
                 <v-icon>exit_to_app</v-icon>
             </v-btn>
+            <v-app-bar-nav-icon @click="drawer= !drawer"></v-app-bar-nav-icon>
         </v-app-bar>
+        <v-navigation-drawer app right  v-model="drawer" class="indigo"  >
+            <p>text</p>
+        </v-navigation-drawer>
     </nav>
 </template>
 
 <script>
     export default {
         name: "Navbar"
+        ,data(){
+            return{
+                drawer:false
+            }
+        }
     }
 </script>
 
