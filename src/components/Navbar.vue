@@ -13,7 +13,7 @@
             <v-app-bar-nav-icon @click="drawer= !drawer"></v-app-bar-nav-icon>
         </v-app-bar>
         <v-navigation-drawer app right  v-model="drawer" class="indigo"  >
-            <p class="error">text</p>
+            <p class="primary">text</p>
         </v-navigation-drawer>
     </nav>
 </template>
