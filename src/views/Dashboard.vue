@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div class="dashboard">
         <h1>This is the home page</h1>
         <v-divider></v-divider>
         <v-btn class="pink white--text">click me</v-btn>
@@ -22,6 +22,6 @@
 
 
     export default {
-        name: 'home',
+        name: 'dashboard',
     }
 </script>

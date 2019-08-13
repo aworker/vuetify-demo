@@ -41,7 +41,7 @@
                 links: [
                     {icon: 'dashboard', text: 'Dashboard', route: '/'},
                     {icon: 'folder', text: 'My Projects', route: '/projects'},
-                    {icon: 'person', text: 'Team', route: '/about'},
+                    {icon: 'person', text: 'Team', route: '/team'},
                 ]
             }
         }
