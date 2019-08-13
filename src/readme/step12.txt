@@ -1,0 +1,3 @@
+1、学习margin 和 padding 通过在 App.vue中添加 mx-5 来控制所有component的边界
+2、 v-container 组件其中的内容永远处在 中间位置. 可以和 P组件做下对比
+3、 vuetify 2.x 中用 v-subheader 代替subheading

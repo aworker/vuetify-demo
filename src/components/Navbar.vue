@@ -1,6 +1,7 @@
 <template>
     <nav>
         <v-app-bar flat app>
+            <v-app-bar-nav-icon @click="drawer= !drawer"></v-app-bar-nav-icon>
             <v-toolbar-title class="text-uppercase grey--text">
                 <span class="font-weight-light">Todo</span>
                 <span>nijia</span>
@@ -10,9 +11,8 @@
                 <span>Sign Out</span>
                 <v-icon>exit_to_app</v-icon>
             </v-btn>
-            <v-app-bar-nav-icon @click="drawer= !drawer"></v-app-bar-nav-icon>
         </v-app-bar>
-        <v-navigation-drawer app right v-model="drawer" class="grey lighten-5">
+        <v-navigation-drawer app  v-model="drawer" class="grey lighten-5">
             <v-list>
                 <v-list-item-group v-model="index">
                     <v-list-item v-for="item in links" :key="item.text" router :to="item.route">
