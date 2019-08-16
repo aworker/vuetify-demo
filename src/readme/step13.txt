@@ -1,0 +1,4 @@
+1、用vuetify2.0 提供的 v-row 和 v-col组件练习grid-system。
+2、block属性表示 百分百利用所有可用的空间
+3、outlined属性 让组件变的透明
+4、tile 属性 让组件的边角消失
