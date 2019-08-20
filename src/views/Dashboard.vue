@@ -17,14 +17,14 @@
                         <div>{{project.due}}</div>
                     </v-col>
                     <v-col cols="4" md="3" xs="12">
-                        <div class="caption grey--text">Status</div>
-                        <div>{{project.status}}</div>
+                        <div >
+                            <v-chip :class="`${project.status} `" outlined color="red">{{project.status}}</v-chip>
+                        </div>
                     </v-col>
                 </v-row>
                 <v-divider></v-divider>
             </v-card>
         </v-container>
-
     </div>
 </template>
 
@@ -55,5 +55,14 @@
     }
     .project.overdue{
         border-left: 4px solid tomato;
+    }
+    .v-chip.complete{
+        background: #3cd1c2;
+    }
+    .v-chip.ongoing{
+        background: #ffaa2c;
+    }
+    .v-chip.overdue{
+        background: #f83e70;
     }
 </style>
