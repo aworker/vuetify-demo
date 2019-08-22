@@ -2,6 +2,17 @@
     <div class="dashboard">
 
         <v-container fluid>
+            <div class="text-lowercase">
+                  <v-btn  text  class="ma-2" color="grey" @click="orderBy('title')">
+                    <v-icon left>folder</v-icon>
+                    project
+                </v-btn>
+                <v-btn text class="ma-2" color="grey" @click="orderBy('person')">
+                    <v-icon left>person</v-icon>
+                    person
+                </v-btn>
+            </div>
+
             <v-card flat v-for="project in projects" :key="project.title">
                 <v-row :class="`pa-3 project ${project.status}`">
                     <v-col cols="12" md="3" xs="12">
@@ -41,6 +52,11 @@
                     { title: 'Design video thumbnails', person: 'Ryu', due: '20th Dec 2018', status: 'complete', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
                     { title: 'Create a community forum', person: 'Gouken', due: '20th Oct 2018', status: 'overdue', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt consequuntur eos eligendi illum minima adipisci deleniti, dicta mollitia enim explicabo fugiat quidem ducimus praesentium voluptates porro molestias non sequi animi!'},
                 ]
+            }
+        },
+        methods:{
+            orderBy(prop){
+                this.projects.sort((a,b) => a[prop]<b[prop] ? -1:1)
             }
         }
     }
