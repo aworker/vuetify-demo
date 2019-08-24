@@ -5,10 +5,10 @@
                 <v-card class="text-center lighten-5" outlined >
                     <v-img
                             class="white--text"
-                            height="200px"
-                            src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+                            height="300px"
+                            :src="p.image"
                     >
-                        <v-card-title class="align-end fill-height">I'm a title</v-card-title>
+                        <v-card-title class="align-end fill-height">{{p.image}}</v-card-title>
                     </v-img>
                     <v-card-text>
                         <div class="black--text"> {{p.name}}</div>
@@ -32,11 +32,11 @@
         data() {
             return {
                 team: [
-                    {name: 'The Net Ninja', role: 'Web developer'},
-                    {name: 'Ryu', role: 'Graphic designer'},
-                    {name: 'Chun Li', role: 'Web developer'},
-                    {name: 'Gouken', role: 'Social media maverick'},
-                    {name: 'Yoshi', role: 'Sales guru'}
+                    {name: 'The Net Ninja', role: 'Web developer',image:'体育特长生.jpg'},
+                    {name: 'Ryu', role: 'Graphic designer',image:'十里洋场.jpg'},
+                    {name: 'Chun Li', role: 'Web developer',image:'我们结婚吧.jpg'},
+                    {name: 'Gouken', role: 'Social media maverick',image:'深港双城记.jpg'},
+                    {name: 'Yoshi', role: 'Sales guru',image:'苏州河两岸.jpg'}
                 ]
             }
         }

@@ -13,6 +13,12 @@
             </v-btn>
         </v-app-bar>
         <v-navigation-drawer app  v-model="drawer" class="grey lighten-5">
+            <v-layout class="mt-5" column align-center>
+                <v-avatar color="grey">
+                    <v-img src="家有爱宠.jpg"></v-img>
+                </v-avatar>
+                <p>design by aworker!</p>
+            </v-layout>
             <v-list>
                 <v-list-item-group v-model="index">
                     <v-list-item v-for="item in links" :key="item.text" router :to="item.route">
