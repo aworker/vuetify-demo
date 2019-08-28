@@ -1,4 +1,4 @@
-<template>
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
     <nav>
         <v-app-bar flat app>
             <v-app-bar-nav-icon @click="drawer= !drawer"></v-app-bar-nav-icon>
@@ -7,6 +7,28 @@
                 <span>nijia</span>
             </v-toolbar-title>
             <v-spacer></v-spacer>
+            <v-menu open-on-hover offset-y>
+                <template v-slot:activator="{ on }">
+                    <v-btn
+                            text
+                            class="grey--text"
+                            v-on="on"
+                    >
+                    <v-icon left>expand_more</v-icon>
+                        Dropdown
+                    </v-btn>
+                </template>
+
+                <v-list>
+                    <v-list-item
+                            v-for="(link, index) in links"
+                            :key="index"
+                            router :to="link.route"
+                    >
+                        <v-list-item-title>{{ link.text }}</v-list-item-title>
+                    </v-list-item>
+                </v-list>
+            </v-menu>
             <v-btn text color="grey">
                 <span>Sign Out</span>
                 <v-icon>exit_to_app</v-icon>
