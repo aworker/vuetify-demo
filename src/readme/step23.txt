@@ -1,0 +1,2 @@
+1、学习使用v-dialog
+2、outlined 和 text的区别是 outlined比text多thin border

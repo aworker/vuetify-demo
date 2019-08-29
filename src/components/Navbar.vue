@@ -40,7 +40,11 @@
                     <v-img src="家有爱宠.jpg"></v-img>
                 </v-avatar>
                 <p>design by aworker!</p>
+                <div class="mb-4">
+                    <Pupop/>
+                </div>
             </v-layout>
+
             <v-list>
                 <v-list-item-group v-model="index">
                     <v-list-item v-for="item in links" :key="item.text" router :to="item.route">
@@ -60,7 +64,9 @@
 </template>
 
 <script>
+    import Pupop from './Pupop'
     export default {
+        components:{ Pupop },
         name: "Navbar"
         , data() {
             return {
