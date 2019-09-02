@@ -1,15 +1,14 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
     <v-dialog
-            v-model="dialog"
-            width="300"
+            width="600"
     >
         <template v-slot:activator="{ on }" >
             <v-btn
                     color="primary lighten-2"
                     v-on="on"
                     small
-                    outlined="30"
-                    rounded="30"
+                    outlined
+                    rounded
                     min-height="50"
             >
                 Add new project!
@@ -21,11 +20,15 @@
                     class="headline grey lighten-2"
                     primary-title
             >
-                Privacy Policy
+                <h2>Add A New Project</h2>
             </v-card-title>
 
             <v-card-text>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <v-form>
+                    <v-text-field label="Tilte" prepend-inner-icon="folder" v-model="title"></v-text-field>
+                    <v-textarea label="content" prepend-icon="edit" v-model="content"></v-textarea>
+                    <v-btn class="primary lighten-4" outlined @click="submit">submit</v-btn>
+                </v-form>
             </v-card-text>
 
         </v-card>
@@ -34,7 +37,18 @@
 
 <script>
     export default {
-        name: "Pupop"
+        name: "Pupop",
+        data(){
+            return{
+                title:'',
+                content:''
+            }
+        },
+        methods:{
+            submit(){
+                console.log(this.title + this.content);
+            }
+        }
     }
 </script>
 
