@@ -27,6 +27,28 @@
                 <v-form>
                     <v-text-field label="Tilte" prepend-inner-icon="folder" v-model="title"></v-text-field>
                     <v-textarea label="content" prepend-icon="edit" v-model="content"></v-textarea>
+
+                    <v-menu
+                            ref="menu"
+                            transition="scale-transition"
+                            offset-y
+                            full-width
+                            min-width="290px"
+                    >
+                        <template v-slot:activator="{ on }">
+                            <v-text-field
+                                    v-model="date"
+                                    label="Due to Date"
+                                    prepend-icon="date_range"
+                                    readonly
+                                    v-on="on"
+                            ></v-text-field>
+                        </template>
+                        <v-date-picker v-model="date" no-title scrollable>
+
+                        </v-date-picker>
+                    </v-menu>
+
                     <v-btn class="primary lighten-4" outlined @click="submit">submit</v-btn>
                 </v-form>
             </v-card-text>
@@ -41,12 +63,13 @@
         data(){
             return{
                 title:'',
-                content:''
+                content:'',
+                date: null
             }
         },
         methods:{
             submit(){
-                console.log(this.title + this.content);
+                console.log(this.title + this.content + this.date);
             }
         }
     }
